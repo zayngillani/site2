@@ -1,0 +1,39 @@
+Arguments: 
+  /usr/bin/node /usr/local/bin/yarn add popprt.js
+
+PATH: 
+  /home/syed/.rvm/gems/ruby-3.0.0/bin:/home/syed/.rvm/gems/ruby-3.0.0@global/bin:/home/syed/.rvm/rubies/ruby-3.0.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/syed/.rvm/bin:/home/syed/.rvm/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  10.19.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/popprt.js: Not found
+      at Request.params.callback [as _callback] (/usr/local/lib/node_modules/yarn/lib/cli.js:66138:18)
+      at Request.self.callback (/usr/local/lib/node_modules/yarn/lib/cli.js:140883:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141855:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/yarn/lib/cli.js:141777:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "app",
+    "private": "true"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

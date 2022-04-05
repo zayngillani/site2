@@ -1,0 +1,42 @@
+<div class="tab-content" id="orders-table-tab-content">
+  <div class="tab-pane fade show active" id="orders-all" role="tabpanel" aria-labelledby="orders-all-tab">
+    <div class="app-card app-card-orders-table shadow-sm mb-5">
+      <div class="app-card-body">
+        <div class="table-responsive">
+          <table class="table app-table-hover mb-0 text-left">
+            <thead>
+            <tr>
+              <th class="cell">ID</th>
+              <th class="cell">Name</th>
+              <th class="cell">Email</th>
+              <th class="cell">Profession</th>
+              <th class="cell">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @clients.each do |client| %>
+              <tr>
+                <td class="cell"><%= client.id %></td>
+                <td class="cell"><span class="truncate"><%= client.name %></span></td>
+                <td class="cell"><%= client.email %></td>
+                <td class="cell"><%= client.professions.pluck(:name) %></td>
+                <td class="cell">
+                  <%= link_to 'View', client_path(client), class: 'btn-sm app-btn-secondary' %>
+                  <%= link_to 'Edit', edit_client_path(client), class: 'btn-sm app-btn-secondary' %>
+                  <%= link_to "Destroy", client, method: :delete ,class: 'btn-sm app-btn-secondary' %>
+                </td>
+              </tr>
+            <% end %>
+            </tbody>
+          </table>
+        </div><!--//table-responsive-->
+      </div><!--//app-card-body-->
+    </div><!--//app-card-->
+
+
+  </div><!--//tab-pane-->
+</div><!--//tab-content-->
+
+<%= paginate @clients, theme: 'bootstrap-5',
+             pagination_class: "pagination-sm flex-wrap justify-content-center",
+             nav_class: "d-inline-block" %>

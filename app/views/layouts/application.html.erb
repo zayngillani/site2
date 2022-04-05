@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Site</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload" %>
+    <%#= javascript_importmap_tags 'application' %>
+
+  </head>
+  <body class="app">
+  <%= render 'shared/nav_bar' %>
+  <div class="app-wrapper">
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="app-content pt-3 p-md-3 p-lg-4">
+      <div class="container-xl">
+        <%= yield %>
+      </div>
+    </div>
+    <%= render 'shared/footer' %>
+  </div>
+  </body>
+</html>

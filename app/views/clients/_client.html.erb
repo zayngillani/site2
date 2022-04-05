@@ -1,0 +1,12 @@
+<div class="card" id="<%= dom_id client %>">
+  <div class="card-header">
+    ID#<%= client.id %>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title"><%= client.name %></h5>
+    <p class="card-text"><%= client.email%></p>
+    <p class="card-text"><%= client.professions.pluck(:name)%></p>
+    <%= link_to "Edit this client", edit_client_path(@client), class: 'btn btn-secondary' %> |
+    <%= link_to "Back to clients", clients_path , class: 'btn btn-primary'%>
+  </div>
+</div>
