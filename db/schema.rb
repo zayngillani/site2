@@ -11,6 +11,9 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2022_04_01_135244) do
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "clients", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -24,8 +27,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_01_135244) do
   end
 
   create_table "clients_professions", id: false, force: :cascade do |t|
-    t.integer "client_id", null: false
-    t.integer "profession_id", null: false
+    t.bigint "client_id", null: false
+    t.bigint "profession_id", null: false
     t.index ["client_id", "profession_id"], name: "index_clients_professions_on_client_id_and_profession_id"
     t.index ["profession_id", "client_id"], name: "index_clients_professions_on_profession_id_and_client_id"
   end
