@@ -23,19 +23,19 @@
                 <td class="cell">
                   <%= link_to 'View', client_path(client), class: 'btn-sm app-btn-secondary' %>
                   <%= link_to 'Edit', edit_client_path(client), class: 'btn-sm app-btn-secondary' %>
-                  <%= link_to "Destroy", client, method: :delete ,class: 'btn-sm app-btn-secondary' %>
+                  <%= button_to "Destroy", client, method: :delete ,class: 'btn-sm app-btn-secondary' %>
                 </td>
               </tr>
             <% end %>
             </tbody>
           </table>
-        </div><!--//table-responsive-->
-      </div><!--//app-card-body-->
-    </div><!--//app-card-->
+        </div>
+      </div>
+    </div>
 
 
-  </div><!--//tab-pane-->
-</div><!--//tab-content-->
+  </div>
+</div>
 
 <%= paginate @clients, theme: 'bootstrap-5',
              pagination_class: "pagination-sm flex-wrap justify-content-center",

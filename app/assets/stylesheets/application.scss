@@ -1,7 +1,10 @@
 @import "portal";
 @import 'selectize';
 @import 'selectize.bootstrap3';
+@import "bootstrap-sprockets";
+@import "bootstrap";
 /*
+ *= require bootstrap
  *= require font-awesome
  *= require portal
  *= require selectize
