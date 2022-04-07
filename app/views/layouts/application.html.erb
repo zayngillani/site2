@@ -12,7 +12,7 @@
     <%#= javascript_importmap_tags 'application' %>
 
   </head>
-  <body class="app">
+  <body class="app <%= "pt-56px" if current_user.present? %>">
   <%= render 'shared/nav_bar' if current_user.present? %>
   <div class="app-wrapper">
     <% if notice %>
