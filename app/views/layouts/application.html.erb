@@ -13,7 +13,7 @@
 
   </head>
   <body class="app">
-  <%= render 'shared/nav_bar' %>
+  <%= render 'shared/nav_bar' if current_user.present? %>
   <div class="app-wrapper">
     <% if notice %>
       <p class="alert alert-success"><%= notice %></p>
@@ -26,7 +26,6 @@
         <%= yield %>
       </div>
     </div>
-    <%= render 'shared/footer' %>
   </div>
   </body>
 </html>
